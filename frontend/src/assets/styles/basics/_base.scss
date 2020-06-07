@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+
+    line-height: 1.5em;
+}
+
+body {
+    margin: 0;
+}
+
+.App {
+    background: #f9fcfb;
+
+    .background-container {
+        background-image: url('./rsz_auth_background.jpg');
+
+    }
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+    color: inherit
+}
+button {
+    & :focus {
+        outline: none;
+    }
+    border: none;
+}
+
+
+.fas.fa-star {
+    cursor: pointer;
+    font-size: 2em;
+}
+input[type="radio"] {
+    display: none;
+}
+
+

@@ -1,0 +1,113 @@
+.review-container {
+    .add-btn {
+        background-color: #979797;
+        cursor: pointer;
+        width: 175px;
+        height: 45px;
+        margin-bottom: 35px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 2px 1px #898386a6;
+        color: white;
+        font-family: Ubuntu-medium;
+        font-size: 1.2em;
+        transition: 0.3s ease-in-out;
+        &:hover {
+            box-shadow: none;
+            border: 2px solid #3f51b5;
+            width: 225px;
+            color: #3f51b5;
+        }
+    }
+
+    // .add-review-container {
+
+    .add-review-section {
+        background-color: #caccce63;
+        padding: 20px;
+        display: flex;
+        width: 655px;
+        margin-bottom: 50px;
+        border-radius: 15px;
+        .product-review {
+            form {
+                div {
+                    label {
+                        Input {
+                            margin: 20px 0px;
+                            width: 500px;
+                            &::placeholder {
+                                line-height: 1.7285em;
+                                font-family: Ubuntu-medium;
+                                color: #6d6c6c;
+                            }
+                        }
+                    }
+                }
+                button {
+                    background-color: #b3a7a994;
+                    width: 100px;
+                    height: 35px;
+                    border-radius: 8px;
+                    font-family: Ubuntu-medium;
+                    cursor: pointer;
+                    box-shadow: 1px 1px 2px 1px #898386a6;
+                    color: white;
+                    font-size: 1.3em;
+                    transition: .3s ease-in-out;
+                    &:hover {
+                        background-color: #3f51b5;
+
+                    }
+                }
+            }
+        }
+    }
+
+    .buyer-review {
+        display: flex;
+        justify-content: space-between;
+        background-color: #caccce63;
+        margin-bottom: 20px;
+        width: 58%;
+        border-radius: 25px;
+        padding: 15px 25px;
+        .buyer-review-img {
+            max-width: 100px;
+            max-height: 100px;
+            min-width: 100px;
+            min-height: 100px;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            border: 2px solid white;
+        }
+
+        .buyer-review-main {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            width: 80%;
+            .buyer-review-main-top {
+                display: flex;
+                justify-content: space-between;
+                .buyer-review-name {
+                    font-family: Merry-Bold;
+                    font-size: 1.2em;
+                    color: #3f51b5;
+                }
+
+                .buyer-review-rate {
+                    font-size: 1.8em;
+                    color: #ffc107;
+                }
+            }
+
+            .buyer-review-txt {
+                font-family: Merry-BoldItalic;
+                font-size: 1em;
+                letter-spacing: 1px;
+                color: #525252;
+            }
+        }
+    }
+}

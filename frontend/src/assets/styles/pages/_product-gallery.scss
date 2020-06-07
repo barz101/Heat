@@ -1,0 +1,32 @@
+.product-gallery-container {
+    padding-top: 80px;
+    // .tag-search{
+    //     margin-top: 50px;
+    // }
+
+    h1 {
+        margin-top: 40px;
+        text-align: center;
+        align-self: center;
+        justify-content: center;
+        justify-self: center;
+    }
+    .product-gallery-content {
+        width: 88vw;
+        margin: 0 auto;
+        box-sizing: unset;
+        ul {
+            flex-wrap: wrap;
+
+            .product-card {
+                margin-bottom: 38px;
+                .product-card-header {
+                    flex-grow: 1;
+                }
+                .product-card-footer {
+                    flex-grow: 1;
+                }
+            }
+        }
+    }
+}

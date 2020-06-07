@@ -1,0 +1,40 @@
+// // Setup
+@import "./setup/variables";
+@import "./setup/functions";
+@import "./setup/mixins";
+@import "./setup/typography";
+
+// Basics
+@import "./basics/helpers";
+@import "./basics/base";
+
+// // Pages
+@import "./pages/home-page";
+@import "./pages/product-details";
+@import "./pages/city-page";
+@import "./pages/edit-product";
+@import "./pages/signup-page";
+@import "./pages/signin-page";
+@import "./pages/product-gallery";
+@import "./pages/user-profile";
+
+
+// Components
+@import "./cmps/main-header";
+@import "./cmps/main-footer";
+@import "./cmps/product-card";
+@import "./cmps/event-calender";
+@import "./cmps/city-list";
+@import "./cmps/search-bars";
+@import "./cmps/product-review";
+@import "./cmps/order-form";
+
+// // Webpacks 
+// @import 'flickity/dist/flickity.min.css';
+
+
+
+
+
+
+

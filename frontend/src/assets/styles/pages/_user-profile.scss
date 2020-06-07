@@ -1,0 +1,65 @@
+.user-profile-container {
+    padding-top: 60px;
+    width: 88vw;
+    margin: 0 auto;
+    box-sizing: unset;
+    min-height: 80vh;
+    // justify-content: center;
+    margin-left: 200px;
+    .profile-menu {
+        width: 100%;
+        max-width: 220px;
+    }
+    .profile-main-content {
+        padding-left: 20px;
+        width: 800px;
+    }
+    .messege-center-container {
+        width: 100%;
+        flex-grow: 1;
+        // margin: 0 auto;
+        // box-sizing: unset;
+    }
+    .user-orders-container {
+        p {
+            font-size: rem(27px);
+        }
+        .ui.secondary.pointing.menu {
+            div {
+                cursor: pointer;
+            }
+        }
+        .ui.image.header {
+            img {
+                width: 40px;
+                min-width: 40px;
+                height: 40px;
+                min-height: 40px;
+                object-fit: cover;
+            }
+        }
+}
+}
+
+.ui.image.header {
+    img {
+        width: 40px;
+        min-width: 40px;
+        height: 40px;
+        min-height: 40px;
+        object-fit: cover;
+    }
+}
+
+.ui.segment.flex{
+    width: 847px;
+    // height: 500px;
+    .card{
+        max-width: 500px;
+    }
+}
+
+.ui.secondary.pointing.menu .item {
+cursor: pointer;
+}
+

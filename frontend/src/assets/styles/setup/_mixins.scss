@@ -1,0 +1,41 @@
+/* Breakpoint mixins */
+
+@mixin for-narrow-layout {
+    @media (max-width: $narrow-breakpoint + 40) {
+        @content;
+    }
+}
+
+@mixin for-normal-layout {
+    @media (min-width: $normal-breakpoint + 40) {
+        @content;
+    }
+}
+
+@mixin for-wide-layout {
+    @media (min-width: $wide-breakpoint + 40) {
+        @content;
+    }
+}
+
+// Mixin for removing hover efects on iphone screen
+@mixin hover-supported {
+    @media not all and (pointer: coarse) {
+        &:hover {
+            @content;
+        }
+    }
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 30%;
+        width: 60%;
+    }
+    to {
+        margin-right: 100%;
+        width: 35%;
+    }
+}
+
+

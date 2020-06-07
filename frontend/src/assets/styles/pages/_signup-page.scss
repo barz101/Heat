@@ -1,0 +1,36 @@
+.paper {
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .avatar {
+        margin: 1px;
+        background-color: rgb(72, 72, 72);
+    }
+}
+.form {
+    width: 100%;
+    margin-top: 3px;
+    .MuiInputLabel-root.Mui-focused {
+        color: white;
+    }
+    .MuiOutlinedInput-root.Mui-focused {
+        .MuiOutlinedInput-notchedOutline {
+            border-color: rgb(72, 72, 72);
+        }
+    }
+
+    .no-outlined {
+        input {
+            outline-color: rgb(72, 72, 72);
+        }
+    }
+    .form-outline {
+        background-color: rgb(72, 72, 72);
+    }
+    .submit {
+        margin: 3px 0 2px;
+        background-color: rgb(72, 72, 72);
+        color: white;
+    }
+}

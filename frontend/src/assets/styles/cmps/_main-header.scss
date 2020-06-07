@@ -1,0 +1,178 @@
+.main-header {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    transition: 0.6s ease-out;
+    padding: 0px 50px;
+    z-index: 100;
+    height: 62px;
+    padding-top: 5px;
+    .logo {
+        // margin-bottom: 20px;
+        padding: 20px 13px 16px 13px;
+        // box-shadow: 0 0 0 1px #18792f70;
+        // padding: 16px 0 15px 0;
+        // width: 90px;
+        background-color: #21ba45;
+        // background-color: #4eaf69c7;
+        border-radius: 47%;
+        text-shadow: 3px 1.5px 0px #313131d4;
+        color: #f5f6fa;
+        font-size: rem(30px);
+        font-family: Alconica;
+    }
+    .header-nav {
+        width: 370px;
+        display: flex;
+        justify-content: flex-end;
+
+        .login {
+            color: white;
+            background-color: #f2711c;
+            font-weight: bold;
+            border-radius: 5%;
+            border: 1px solid #c35c17eb;
+            padding: 6px;
+            span {
+                font-family: Ubuntu-medium;
+                font-size: rem(18px);
+                margin-right: 5px;
+                padding-left: 3px;
+            }
+            svg {
+                font-size: rem(26px);
+            }
+        }
+        .logout {
+            color: white;
+            font-size: rem(28px);
+        }
+        .profile {
+            color: white;
+            font-size: rem(28px);
+            margin-left: 10px;
+        }
+
+        > * {
+            color: #171412;
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+        }
+        .MuiSvgIcon-root {
+            z-index: 102;
+        }
+        .welcome-user-nav {
+            font-family: Merry-Italic;
+            letter-spacing: em(1.6px);
+            font-size: rem(19px);
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+        }
+        .login-icon-nav {
+            z-index: 102;
+            font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                font-size: rem(35px);
+            }
+        }
+        .logout-icon-nav {
+            z-index: 102;
+            font-size: rem(33px);
+            // transition: 0.2s ease-in-out;
+
+            // &:hover {
+            //     font-size: rem(35px);
+            // }
+        }
+        .order-icon-nav {
+            z-index: 102;
+            font-size: rem(33px);
+            transition: 0.2s ease-in-out;
+
+            &:hover {
+                font-size: rem(35px);
+            }
+        }
+    }
+}
+
+.main-header {
+    &.regular {
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        transition: 0.4s ease-out;
+        padding: 0px 80px;
+        z-index: 100;
+        background: #4eaf6a;
+        height: 61px;
+        box-shadow: 0 1px 3px #0000006b;
+        padding-top: 0;
+
+        .MuiSvgIcon-root {
+            z-index: 102;
+        }
+        .logo {
+            padding: 20px 13px 16px 13px;
+            // box-shadow: 0 0 0 1px #18792f70;
+            // padding: 16px 0 15px 0;
+            // width: 90px;
+            // background-color: #4eaf69c7;
+            background-color: transparent;
+            border-radius: 50%;
+            text-shadow: 3px 1.5px 0px #313131d4;
+            color: #f5f6fa;
+            font-size: rem(30px);
+            font-family: Alconica;
+        }
+        .header-nav {
+            width: 370px;
+            display: flex;
+            justify-content: flex-end;
+
+            .login {
+                color: white;
+                background-color: #f2711c;
+                font-weight: bold;
+                border-radius: 5%;
+                border: 1px solid #c35c17eb;
+                padding: 6px;
+                span {
+                    font-family: Ubuntu-medium;
+                    font-size: rem(18px);
+                    margin-right: 5px;
+                    padding-left: 3px;
+                }
+                svg {
+                    font-size: rem(26px);
+                }
+            }
+            .logout {
+                color: white;
+                font-size: rem(28px);
+            }
+            .profile {
+                color: white;
+                font-size: rem(28px);
+                margin-left: 10px;
+            }
+            .order-icon-nav {
+                z-index: 102;
+                font-size: rem(33px);
+                transition: 0.2s ease-in-out;
+
+                &:hover {
+                    font-size: rem(35px);
+                }
+            }
+        }
+    }
+}
+

@@ -1,0 +1,154 @@
+.order-form {
+    grid-area: order-form;
+    // display: flex;
+    max-height: 100%;
+    position: sticky;
+    bottom: 0px;
+    .MuiPickersToolbar-toolbar {
+        background-color: #f2711c;
+        height: 70px;
+        border-bottom: 1px solid #574b43;
+    }
+    .MuiTypography-h4 {
+        font-size: rem(24px);
+        font-weight: 500;
+    }
+    .MuiPickersCalendar-transitionContainer {
+        margin-top: 0;
+        min-height: 120px;
+    }
+    .MuiPickersBasePicker-pickerView {
+        padding-top: 10px;
+        justify-content: start;
+        min-height: 280px;
+    }
+
+    .MuiPickersDay-daySelected {
+        background-color: #4eaf6a;
+        &:hover {
+            background-color: #4eaf6a;
+            opacity: 0.7;
+        }
+    }
+    .MuiPickersDay-current {
+        // color: #f2711c
+        // background-color: #4eaf6a;
+    }
+
+    form {
+        position: sticky;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        // padding: 20px;
+        box-shadow: 0px 1px 0px 1px #4949498f;
+        // border: 2px solid #f2711c;
+        border-radius: 8px;
+        // background-color: #fdf4ee;
+        position: relative;
+        // height: 100%;
+        transition: 0.4s ease-in-out;
+        &:hover {
+            transform: scale(1.01, 1.015);
+        }
+    }
+
+    .pax-query {
+        padding-top: 5px;
+        border-top: 1px solid rgb(173, 173, 173);
+        // margin-top: 15px;
+        font-size: rem(16px);
+        font-family: roboto;
+        font-weight: bold;
+        color: #2e2e2e;
+    }
+
+    .order-controller {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 140px;
+
+        .order-quantity {
+            padding-top: 10px;
+            display: flex;
+            width: 60%;
+            justify-content: center;
+            border-collapse: collapse;
+            input {
+                height: 25px;
+                font-size: 1.2em;
+                font-family: roboto;
+                font-weight: bold;
+                text-align: center;
+                width: 30%;
+                outline: none;
+                border: none;
+                border: 1px solid rgb(133, 133, 133);
+                // border-radius: 5px;
+                // margin: 0px 5px;
+            }
+            button {
+                border: 1px solid rgb(133, 133, 133);
+                font-family: roboto;
+                height: 25px;
+                width: 25px;
+                font-size: 1.4em;
+                font-weight: 700;
+                cursor: pointer;
+                color: rgb(77, 77, 77);
+                background-color: rgb(211, 240, 211);
+                // border: rgb(153, 153, 153) 1px solid;
+                border-radius: 2px;
+                transition: 0.3s ease-in-out;
+                &:hover {
+                    background-color: rgb(169, 199, 169);
+                    // color: #1aac18;
+                    // box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.50);
+                }
+            }
+        }
+
+        .order-final {
+            // display: flex;
+            // flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            height: 60%;
+            width: 100%;
+            div {
+                font-size: rem(16px);
+                font-weight: bold;
+                font-family: roboto;
+                color: #333333;
+                padding-top: 5px;
+                padding-bottom: 10px;
+            }
+            button {
+                width: 70%;
+                font-size: rem(30px);
+                font-weight: 700;
+                cursor: pointer;
+                color: #f7f7f7;
+                background-color: #4eaf6a;
+                border: 2px solid rgb(27, 99, 27);
+                // border-radius: 5px;
+                font-family: Ubuntu-medium;
+                // padding-top: 15px;
+                // padding-bottom:15px;
+                border: 2px solid #1aac18;
+                letter-spacing: 1.5px;
+                transition: 0.4s ease-in-out;
+                &:hover {
+                    transform: scale(1.04, 1.04);
+                    filter: brightness(110%);
+                    // opacity: 0.7;
+                    // color: #35eb33;
+                    // border: 2px solid #35eb33;
+                    // box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.50);
+                }
+            }
+        }
+    }
+}

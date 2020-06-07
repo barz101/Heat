@@ -1,0 +1,162 @@
+.city-page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero-city-page"
+        "cities-container"
+        "products-container";
+    .product-card {
+        margin-bottom: 60px;
+    }
+
+    .hero {
+        display: flex;
+        height: 60vh;
+        background-repeat: no-repeat;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        justify-content: center;
+        align-items: center;
+        font-family: "Teko", sans-serif;
+        color: white;
+        font-size: 4em;
+        text-shadow: -1px 1px 20px rgba(39, 33, 33, 0.89);
+        box-shadow: 0px 2px 2px 0px #3232328c;
+    }
+    .product-container-city {
+        display: flex;
+        max-width: 84vw;
+        position: relative;
+        left: 8vw;
+    }
+
+    .city-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 25px;
+
+        .city-txt {
+            line-height: 2.9rem;
+            font-size: 25px;
+            padding: 65px 20vw 65px 20vw;
+            .city-about {
+                font-size: 40px;
+                color: #423f3f;
+            }
+            .city-info-txt {
+                color: rgba(84, 81, 81, 0.87);
+            }
+        }
+
+        .city-imgs-container {
+            display: grid;
+            height: 450px;
+
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 15px;
+            width: 80vw;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "img-1  img-1  img-1 img-2"
+                "img-1  img-1  img-1 img-2"
+                "img-3  img-3  img-4 img-4"
+                "img-3  img-3  img-4 img-4";
+            > * {
+                background-size: cover;
+                background-position: center;
+                transition: 0.3s ease-in-out;
+                background-repeat: no-repeat;
+            }
+            *:hover {
+                transform: scale(1.025, 1.025);
+                filter: saturate(1.5);
+            }
+            .img-1 {
+                grid-area: img-1;
+            }
+            .img-2 {
+                grid-area: img-2;
+            }
+            .img-3 {
+                grid-area: img-3;
+            }
+            .img-4 {
+                grid-area: img-4;
+            }
+            .img-5 {
+                grid-area: img-5;
+            }
+        }
+    }
+}
+
+.city-attraction-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .top-attraction-header {
+        font-size: 36px;
+        color: #423f3f;
+    }
+    .city-attractions {
+        display: grid;
+        grid-gap: 15px;
+        width: 800px;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "card-1  card-2"
+            "card-3  card-4";
+        .attraction-card {
+            width: 100%;
+            img {
+                width: 100%;
+                height: 300px;
+                border-radius: 5px;
+                transition: 0.3s ease-in-out;
+                object-fit: cover;
+                &:hover {
+                    transform: scale(1.025, 1.025);
+                    filter: saturate(1.5);
+                }
+            }
+
+            .attraction-name {
+                font-size: 1.6rem;
+                color: #404040;
+            }
+            .attraction-description {
+                font-size: 17px;
+                color: #606060;
+            }
+        }
+        .card-1 {
+            grid-area: card-1;
+        }
+        .card-2 {
+            grid-area: card-2;
+        }
+        .card-3 {
+            grid-area: card-3;
+        }
+        .card-4 {
+            grid-area: card-4;
+        }
+    }
+}
+@media screen and (max-width: 820px) {
+    .city-attraction-wrapper {
+        .city-attractions {
+            display: grid;
+            grid-gap: 15px;
+            width: 80vw;
+            grid-template-rows: auto;
+            grid-template-areas:
+                "card-1"
+                "card-2"
+                "card-3"
+                "card-4";
+        }
+    }
+}
