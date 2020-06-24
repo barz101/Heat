@@ -23,6 +23,9 @@
                 text-shadow: 3.5px 3px #0000008c;
                 margin: 0 auto;
                 margin-bottom: 30px;
+                // @include for-narrow-layout {
+                //     font-size: rem(40px);
+                // }
             }
             span {
                 font-family: Merry-Italic;
