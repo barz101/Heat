@@ -3,7 +3,6 @@ import { connect } from "react-redux";
 import orderService from "../services/orderService";
 import { loadOrders } from "../actions/orderActions.js";
 import OrderList from "./OrderList.jsx";
-import Header from "./Header";
 import SocketService from "../services/SocketService";
 
 class UserOrders extends React.Component {
@@ -46,7 +45,6 @@ class UserOrders extends React.Component {
   render() {
     return (
       <div className="user-orders-container">
-        {/* <Header pathname={this.props.location.pathname} /> */}
         <div className="ui secondary pointing menu">
           <div onClick={() => this.openOrders('buyer')}
             className={`item ${this.state.ordersTypes === "buyer" ? "active" : ''}`} >My Orders</div>

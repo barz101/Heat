@@ -4,7 +4,7 @@
         height: 80vh;
         background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0)),
             url("https://images.pexels.com/photos/3184183/pexels-photo-3184183.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
-        background-position: bottom;
+        background-position: center;
         background-repeat: no-repeat;
         width: 100%;
         background-size: cover;
@@ -17,15 +17,20 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
+            @include for-narrow-layout {
+                top: 30%;
+            }
             h1 {
                 font-size: rem(70px);
                 letter-spacing: em(1.8px);
                 text-shadow: 3.5px 3px #0000008c;
                 margin: 0 auto;
-                margin-bottom: 30px;
-                // @include for-narrow-layout {
-                //     font-size: rem(40px);
-                // }
+                margin-bottom: rem(30px);
+                @include for-narrow-layout {
+                    font-size: rem(38px);
+                    overflow: hidden;
+                    white-space: nowrap;
+                }
             }
             span {
                 font-family: Merry-Italic;
@@ -35,6 +40,9 @@
                 // margin: 2em auto;
                 text-shadow: 2px 2px #00000069;
                 // font-weight: 100;
+                @include for-narrow-layout {
+                    font-size: rem(16px);
+                }
             }
         }
         // .city-search-bar {
@@ -51,8 +59,13 @@
             left: 45.5%;
             position: relative;
             width: 7.5%;
-            border-top: em(2.5px) solid #21ba45;
+            border-top: 2px solid #21ba45;
+            // width: 30px;
             margin-bottom: em(2.5px);
+            @include for-narrow-layout {
+                width: 27.5%;
+                left: 33%;
+            }
         }
         .title {
             font-size: rem(28px);
@@ -68,6 +81,11 @@
     }
     .products-container {
         margin-bottom: 110px;
+        .product-card {
+            @include for-narrow-layout {
+                margin-bottom: 20px;
+            }
+        }
     }
     .top-chefs .cities-container .top-workshops {
         .underline1 {
@@ -98,6 +116,7 @@
             }
         }
         .testimonials {
+        
             grid-column: 1 / 4;
             font-family: Lato, Arial, sans-serif;
             margin-bottom: 30px;
@@ -117,6 +136,11 @@
             color: #fff;
             background-attachment: fixed;
             font-size: 20px;
+            @include for-narrow-layout {
+                // flex-wrap: wrap;
+                display: none;
+            }
+
             h2 {
                 text-transform: uppercase;
                 font-size: 150%;
@@ -137,6 +161,9 @@
                 -webkit-box-orient: horizontal;
                 -ms-flex-direction: row;
                 flex-direction: row;
+                @include for-narrow-layout {
+                    flex-wrap: wrap;
+                }
 
                 .col {
                     blockquote {

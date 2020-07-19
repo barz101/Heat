@@ -16,14 +16,11 @@ class ProductDetails extends React.Component {
   componentDidMount() {
     const { id } = this.props.match.params;
     this.props.loadProduct(id);
-
-    
   }
 
   onRemoveProduct = () => {
     const { id } = this.props.match.params;
     if (!id) return;
-
     productService.get(id).then((user) => {
       const editedUser = { ...user };
       const cityId = editedUser.product.city._id;
@@ -32,6 +29,13 @@ class ProductDetails extends React.Component {
       this.props.history.push(`/${cityId}`);
     });
   };
+  onSendMsg = () => {
+    const { id } = this.props.match.params;
+    if (!id) return;
+    console.log('loggedin user', this.props.loggedInUser._id);
+    
+    console.log('seller', this.props.match.params.id);
+  }
 
   render() {
     const { user } = this.props;   
@@ -51,12 +55,10 @@ class ProductDetails extends React.Component {
         const rateArr = product.reviews.map((review) => review.rate);
         rate = (rateArr.reduce(reducer) / rateArr.length).toFixed(1);
       }
-      console.log(user.imgUrl);
-      console.log(product.imgUrls);
     return (
       <div className="product-page">
         <Header pathname={this.props.location.pathname} />
-        <section className="product-page-header">
+        <section className="product-page-header content-container">
           <div className="product-page-title">
             <div>
               {product.title} &nbsp; &nbsp;{" "}
@@ -106,7 +108,7 @@ class ProductDetails extends React.Component {
             style={{ backgroundImage: `url(${product.imgUrls[4]})` }}
           />
         </div>
-        <main className="product-page-main">
+        <main className="product-page-main content-container">
           <div className="product-page-content">
             <div className="product-page-prod-details">
               <h2>{product.category}</h2>
@@ -137,9 +139,10 @@ class ProductDetails extends React.Component {
           </div>
           <div className="order-form">
             <OrderForm seller={user} />
+            {/* <button onClick={this.onSendMsg}>Send Messege</button> */}
           </div>
         </main>
-        <section className="product-page-reviews">
+        <section className="product-page-reviews content-container ">
           <ProductReview id={this.props.match.params.id} />
         </section>
       </div>

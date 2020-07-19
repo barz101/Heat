@@ -9,11 +9,14 @@
     width: 550px;
     left: 34vw;
     opacity: 0.9;
+    @include for-narrow-layout {
+        width: 350px;
+        left: 13vw;
+    }
 
     .ui.selection.dropdown > .dropdown.icon {
         top: 1.2em;
     }
-
     .ui.default.dropdown:not(.button) > .text,
     .ui.dropdown:not(.button) > .default.text {
         color: #8a8989;
@@ -22,11 +25,15 @@
         font-size: rem(19px);
         padding: 5px;
         letter-spacing: em(1.7px);
+        @include for-narrow-layout {
+            font-size: rem(15px);
+            overflow: hidden;
+            white-space: nowrap;
+        }
     }
 
     .ui.selection {
         width: 30vw;
-        background: #be2424;
         // left:50vw;
         border-radius: 50px 0px 0px 50px !important;
         // .active
@@ -62,6 +69,9 @@
         font-size: rem(22px);
         font-family: Ubuntu-medium;
         letter-spacing: em(1px);
+        @include for-narrow-layout {
+            font-size: rem(18px);
+        }
     }
     .form-control {
         margin: 1px;
@@ -89,7 +99,7 @@
 
 .main-header {
     .city-search-bar {
-        animation: ease-in 0.8s slidein;
+      animation: ease-in 0.8s slidein;
         left: 37vw;
         opacity: 1;
         position: absolute;
@@ -97,6 +107,9 @@
         width: 400px;
         height: 36px;
         font-size: rem(10px);
+        @include for-narrow-layout {
+          display: none;
+        }
         .ui.default.dropdown:not(.button) > .text,
         .ui.dropdown:not(.button) > .default.text {
             font-size: rem(16px);

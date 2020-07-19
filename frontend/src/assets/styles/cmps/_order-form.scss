@@ -1,17 +1,32 @@
 .order-form {
     grid-area: order-form;
-    // display: flex;
     max-height: 100%;
-    position: sticky;
+    margin: 0 auto;
+    // display: flex;
+    // flex-direction: column;
+    // justify-self: center;
+    // align-items: center;
+    max-width: 305px;
+    // position: sticky;
     bottom: 0px;
+    @include for-narrow-layout {
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
     .MuiPickersToolbar-toolbar {
         background-color: #f2711c;
         height: 70px;
         border-bottom: 1px solid #574b43;
+        @include for-narrow-layout {
+            height: 40px;
+        }
     }
     .MuiTypography-h4 {
         font-size: rem(24px);
         font-weight: 500;
+        @include for-narrow-layout {
+            font-size: rem(22px);
+        }
     }
     .MuiPickersCalendar-transitionContainer {
         margin-top: 0;
@@ -36,7 +51,8 @@
     }
 
     form {
-        position: sticky;
+        min-width: 310px;
+        // position: sticky;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -69,7 +85,9 @@
         align-items: center;
         justify-content: space-evenly;
         height: 140px;
-
+        @include for-narrow-layout {
+            height: 120px;
+        }
         .order-quantity {
             padding-top: 10px;
             display: flex;
@@ -147,6 +165,10 @@
                     // color: #35eb33;
                     // border: 2px solid #35eb33;
                     // box-shadow: 0px 0px 16px 2px rgba(0,0,0,0.50);
+                }
+                @include for-narrow-layout {
+                    font-size: rem(25px);
+                    width: 60%;
                 }
             }
         }

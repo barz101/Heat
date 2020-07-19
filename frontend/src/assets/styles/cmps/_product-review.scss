@@ -9,13 +9,23 @@
         box-shadow: 1px 1px 2px 1px #898386a6;
         color: white;
         font-family: Ubuntu-medium;
-        font-size: 1.2em;
+        font-size: 1.2em;    
         transition: 0.3s ease-in-out;
         &:hover {
             box-shadow: none;
-            border: 2px solid #3f51b5;
+            border: 2px solid #1b7e37;
             width: 225px;
-            color: #3f51b5;
+            color: #1b7e37;
+            @include for-narrow-layout {
+                width: 175px;
+            }
+        }
+        &:focus {
+            outline: none;
+        }
+        @include for-narrow-layout {
+            margin-bottom: 20px;
+            width: 140px;
         }
     }
 
@@ -28,6 +38,10 @@
         width: 655px;
         margin-bottom: 50px;
         border-radius: 15px;
+        @include for-narrow-layout {
+            margin-bottom: 10px;
+            width: 88vw;
+        }
         .product-review {
             form {
                 div {
@@ -39,6 +53,9 @@
                                 line-height: 1.7285em;
                                 font-family: Ubuntu-medium;
                                 color: #6d6c6c;
+                            }
+                            @include for-narrow-layout {
+                                width: 75vw;
                             }
                         }
                     }
@@ -55,7 +72,7 @@
                     font-size: 1.3em;
                     transition: .3s ease-in-out;
                     &:hover {
-                        background-color: #3f51b5;
+                        background-color: #1b7e37;
 
                     }
                 }
@@ -71,6 +88,10 @@
         width: 58%;
         border-radius: 25px;
         padding: 15px 25px;
+        @include for-narrow-layout {
+            width: auto;
+            padding: 15px 15px 15px 10px;
+        }
         .buyer-review-img {
             max-width: 100px;
             max-height: 100px;
@@ -80,6 +101,13 @@
             background-position: center;
             background-size: cover;
             border: 2px solid white;
+            @include for-narrow-layout {
+                max-width: 70px;
+                max-height: 70px;
+                min-width: 70px;
+                min-height: 70px;
+                border: 1px solid white;
+            }
         }
 
         .buyer-review-main {
@@ -87,18 +115,30 @@
             flex-direction: column;
             justify-content: space-evenly;
             width: 80%;
+            @include for-narrow-layout {
+                margin-left: 8px;
+            }
             .buyer-review-main-top {
                 display: flex;
                 justify-content: space-between;
+                // @include for-narrow-layout {
+                //     justify-content: space-around;
+                // }
                 .buyer-review-name {
                     font-family: Merry-Bold;
                     font-size: 1.2em;
-                    color: #3f51b5;
+                    color: #1b7e37;
+                    @include for-narrow-layout {
+                        font-size: 1em;
+                    }
                 }
 
                 .buyer-review-rate {
                     font-size: 1.8em;
                     color: #ffc107;
+                    @include for-narrow-layout {
+                        font-size: 1.4em;
+                    }
                 }
             }
 
@@ -107,6 +147,9 @@
                 font-size: 1em;
                 letter-spacing: 1px;
                 color: #525252;
+                @include for-narrow-layout {
+                    font-size: 0.8em;
+                }
             }
         }
     }

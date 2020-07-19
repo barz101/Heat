@@ -5,7 +5,12 @@
     justify-content: space-between;
     width: 100%;
     transition: 0.6s ease-out;
-    padding: 0px 50px;
+    padding: 0 50px;
+    @include for-narrow-layout {
+        padding: 0 10px;
+        width: 100vw;
+        align-items: stretch;
+    }
     z-index: 100;
     height: 62px;
     padding-top: 5px;
@@ -22,12 +27,20 @@
         color: #f5f6fa;
         font-size: rem(30px);
         font-family: Alconica;
+        @include for-narrow-layout {
+            margin-top:5px;
+        }
     }
     .header-nav {
-        width: 370px;
         display: flex;
         justify-content: flex-end;
-
+        @media screen and (max-width: 760px) {
+            flex-direction: column;
+            &.navClosed {
+                display: none;
+            }
+            
+        }
         .login {
             color: white;
             background-color: #f2711c;
@@ -48,11 +61,12 @@
         .logout {
             color: white;
             font-size: rem(28px);
+           
         }
         .profile {
             color: white;
             font-size: rem(28px);
-            margin-left: 10px;
+        
         }
 
         > * {
@@ -70,6 +84,9 @@
             font-size: rem(19px);
             color: white;
             border-bottom: 1px solid rgba(255, 255, 255, 0.473);
+            @include for-narrow-layout {
+                line-height: em(25px);
+            }
         }
         .login-icon-nav {
             z-index: 102;
@@ -115,7 +132,11 @@
         height: 61px;
         box-shadow: 0 1px 3px #0000006b;
         padding-top: 0;
-
+        @include for-narrow-layout {
+            padding: 0 10px;
+            width: 100vw;
+            align-items: stretch;
+        }
         .MuiSvgIcon-root {
             z-index: 102;
         }
@@ -133,10 +154,15 @@
             font-family: Alconica;
         }
         .header-nav {
-            width: 370px;
             display: flex;
             justify-content: flex-end;
-
+            @media screen and (max-width: 760px) {
+                flex-direction: column;
+                &.navClosed {
+                    display: none;
+                }
+                
+            }
             .login {
                 color: white;
                 background-color: #f2711c;
@@ -175,4 +201,3 @@
         }
     }
 }
-

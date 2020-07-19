@@ -3,11 +3,15 @@
 }
 
 html {
-
+    height: 100vh;
+    width: 100vw;
     line-height: 1.5em;
+    margin: 0;
 }
 
 body {
+    height: 100vh;
+    width: 100vw;
     margin: 0;
 }
 
@@ -15,8 +19,7 @@ body {
     background: #f9fcfb;
 
     .background-container {
-        background-image: url('./rsz_auth_background.jpg');
-
+        background-image: url("./rsz_auth_background.jpg");
     }
 }
 
@@ -27,7 +30,7 @@ ul {
 }
 a {
     text-decoration: none;
-    color: inherit
+    color: inherit;
 }
 button {
     & :focus {
@@ -36,7 +39,6 @@ button {
     border: none;
 }
 
-
 .fas.fa-star {
     cursor: pointer;
     font-size: 2em;
@@ -44,5 +46,3 @@ button {
 input[type="radio"] {
     display: none;
 }
-
-

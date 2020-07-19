@@ -1,0 +1,40 @@
+.hamburger {
+    display: none;
+ 
+   @media screen and (max-width: 760px) {
+       display:block;
+       margin-right: 10px;
+       color: white;
+       margin-top: 10px;
+   }
+}
+.container-nav {
+    &.navOpened {
+        background-color: rgb(78, 175, 106);
+        // opacity: 0.8;
+        flex-grow: 1;
+        max-width: 50vw;
+        height: 40vh;
+        .header-nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+            height: 60%;
+        }
+        .profile-content  {
+            font-size: rem(20px);
+            margin-top: 30px;
+            color: white;
+            letter-spacing: em(2px)
+            // align-self: flex-end;
+        }
+        .logout-content {
+            font-size: rem(20px);
+            margin-top: 30px;
+            color: white;
+            letter-spacing: em(2px)
+        }
+    }
+}
+

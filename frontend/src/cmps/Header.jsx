@@ -7,12 +7,15 @@ import { RiLoginCircleLine } from 'react-icons/ri';
 import { RiLogoutCircleLine } from 'react-icons/ri';
 import { FaUserCircle } from 'react-icons/fa';
 import CitySearchBar from "./CitySearchBar.jsx";
+import MenuIcon from '@material-ui/icons/Menu';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 
 class Header extends React.Component {
   state = {
-    isUp: false
+    isUp: false,
+    hamburger: 'navClosed'
   }
   componentDidMount() {
     if (this.props.pathname === "/" || this.props.pathname === `/${this.props.city}`) {
@@ -44,9 +47,13 @@ class Header extends React.Component {
       document.querySelector(".main-header").style.boxShadow = "none";
     }
   };
+  toggleHamburger = () => {
+    if (this.state.hamburger === 'navClosed') this.setState({ hamburger: 'navOpened' });
+    else this.setState({ hamburger: 'navClosed' });
+  }
 
   render() {
-    const {isUp} = this.state;
+    const { isUp } = this.state;
     return (
       <div
         className={
@@ -61,30 +68,40 @@ class Header extends React.Component {
           </div>
         </Link>
         {isUp && <CitySearchBar></CitySearchBar>}
-        <div className="header-nav">
-          {this.props.loggedInUser && (
-            <div className="welcome-user-nav">
-              Welcome, {this.props.loggedInUser.name.first}!
-            </div>
-          )}
-          {this.props.loggedInUser && (
-            <Link to="/profile">
-              <FaUserCircle className="profile" />
-            </Link>
-          )}
-          {!this.props.loggedInUser && (
-            <Link to="/auth">
-              <div className="login flex align-center justify-center">
-                <span>Login</span>
-                <RiLoginCircleLine />
+        <div className={"container-nav " + this.state.hamburger}>
+          <div onClick={this.toggleHamburger} className="hamburger">
+            {this.state.hamburger === 'navClosed' && <MenuIcon style={{ fontSize: 40 }} />}
+            {this.state.hamburger === 'navOpened' && <CloseIcon style={{ fontSize: 40 }} />}
+          </div>
+          <div className={"header-nav " + this.state.hamburger}>
+            {this.props.loggedInUser && (
+              <div className="welcome-user-nav">
+                Welcome, {this.props.loggedInUser.name.first}!
               </div>
-            </Link>
-          )}
-          {this.props.loggedInUser && (
-            <Link to="/">
-              <RiLogoutCircleLine className="logout" onClick={this.props.logout} />
-            </Link>
-          )}
+            )}
+            {this.props.loggedInUser && (
+              <Link to="/profile">
+                {this.state.hamburger === 'navClosed' && <FaUserCircle className="profile" />}
+                {this.state.hamburger === 'navOpened' && <span className="profile-content">My Profile</span>}
+              </Link>
+            )}
+            {!this.props.loggedInUser && (
+              <Link to="/auth">
+                <div className="login flex align-center justify-center">
+                  <span>Login</span>
+                  <RiLoginCircleLine />
+                </div>
+              </Link>
+            )}
+            {this.props.loggedInUser && (
+              <Link to="/">
+                <div onClick={this.props.logout}>
+                  {this.state.hamburger === 'navClosed' && <RiLogoutCircleLine className="logout" />}
+                  {this.state.hamburger === 'navOpened' && <span className="logout-content" >Logout</span>}
+                </div>
+              </Link>
+            )}
+          </div>
         </div>
       </div>
     );

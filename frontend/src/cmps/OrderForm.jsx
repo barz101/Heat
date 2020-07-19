@@ -76,7 +76,6 @@ class OrderForm extends React.Component {
   render() {
     const { quantity, totalPrice } = this.state
     return (
-      <div>
         <form onSubmit={this.handleSubmit} >
           <EventCalendar onDateChange={this.onDateChange} />
           <div className="pax-query">How Many In Your Party?</div>
@@ -92,7 +91,6 @@ class OrderForm extends React.Component {
             </div>
           </div>
         </form>
-      </div >
     )
   }
 }

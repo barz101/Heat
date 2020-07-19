@@ -22,7 +22,6 @@ class EditProduct extends Component {
     loadUser() {
         const { id } = this.props.match.params;
         if (!id) return;
-
         productService.get(id).then(user => {
             console.log('The user tags from the db', user.product.tags)
             this.setState({ ...user.product });

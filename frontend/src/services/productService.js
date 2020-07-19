@@ -29,7 +29,6 @@ function query(filterBy) {
     return httpService.get(`user${queryStr}`)
 }
 
-
 function getFav(favIds) {
     var query = '?';
     favIds.forEach((favId, idx) => {

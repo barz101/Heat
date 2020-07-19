@@ -40,9 +40,17 @@
             line-height: 2.9rem;
             font-size: 25px;
             padding: 65px 20vw 65px 20vw;
+            @include for-narrow-layout {
+                font-size: 20px;
+                padding:  30px 10vw 30px 10vw;
+                line-height: 2.2rem;
+            }
             .city-about {
                 font-size: 40px;
                 color: #423f3f;
+                @include for-narrow-layout {
+                    font-size: 30px;
+                }
             }
             .city-info-txt {
                 color: rgba(84, 81, 81, 0.87);
@@ -52,7 +60,6 @@
         .city-imgs-container {
             display: grid;
             height: 450px;
-
             grid-template-columns: 1fr 1fr 1fr 1fr;
             grid-gap: 15px;
             width: 80vw;
@@ -62,6 +69,14 @@
                 "img-1  img-1  img-1 img-2"
                 "img-3  img-3  img-4 img-4"
                 "img-3  img-3  img-4 img-4";
+            @include for-narrow-layout {
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr;
+                grid-template-areas:
+                "img-1"
+                "img-2";
+                grid-gap: 2px;
+            }
             > * {
                 background-size: cover;
                 background-position: center;
@@ -74,9 +89,15 @@
             }
             .img-1 {
                 grid-area: img-1;
+                @include for-narrow-layout {
+                    border-radius: 20px 20px 0 0;
+                }
             }
             .img-2 {
                 grid-area: img-2;
+                @include for-narrow-layout {
+                    border-radius: 0 0 20px 20px;
+                }
             }
             .img-3 {
                 grid-area: img-3;
@@ -99,6 +120,9 @@
     .top-attraction-header {
         font-size: 36px;
         color: #423f3f;
+        @include for-narrow-layout {
+            font-size: 24px;
+        }
     }
     .city-attractions {
         display: grid;
@@ -116,6 +140,9 @@
                 border-radius: 5px;
                 transition: 0.3s ease-in-out;
                 object-fit: cover;
+                @include for-narrow-layout {
+                    margin-top:20px;
+                }
                 &:hover {
                     transform: scale(1.025, 1.025);
                     filter: saturate(1.5);
@@ -125,6 +152,9 @@
             .attraction-name {
                 font-size: 1.6rem;
                 color: #404040;
+                @include for-narrow-layout {
+                    margin: 5px 0;
+                }
             }
             .attraction-description {
                 font-size: 17px;
